@@ -1,3 +1,9 @@
 [submodule ".vim/pack/v1k0d3n/start/vim-airline"]
 	path = .vim/pack/v1k0d3n/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundle/colorschemes"]
+	path = .vim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule ".vim/pack/v1k0d3n/opt/onedark.vim"]
+	path = .vim/pack/v1k0d3n/opt/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
