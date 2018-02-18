@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+# 
 # random collection of aliases
 ## one letter aliases:
 alias h="history"
@@ -12,9 +12,14 @@ alias .....="cd ../../../.."
 
 # utility aliases:
 alias vi="vim"
+alias gc="git clone "
 alias grep='grep --color=auto '
 alias gh="cat ~/.zhistory | grep "
 alias flush="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
+
+# working with archives:
+alias xtar="tar zxvf"
+alias ctar="tar zcvf"
 
 ## listing things:
 alias ls="ls --color=tty"
@@ -22,3 +27,7 @@ alias las="ls -asl"
 
 # development aliases:
 alias debug_go="dlv debug --headless --listen=:2345 --log"
+
+# working with ssh/gpg keys:
+alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo_yellow '=> Public key copied to clipboard.'"
+alias prikey="cat ~/.ssh/id_rsa | pbcopy | echo_yellow '=> Private key copied to clipboard.'"

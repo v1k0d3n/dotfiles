@@ -1,6 +1,22 @@
 #!/bin/bash
 #
 # This is a collection of functions to make life just a little more complete:
+# Let's define some colors first, which can be used elsewhere:
+## lets set some colors first:
+declare -r GREEN="\033[0;32m"
+declare -r RED="\033[0;31m"
+declare -r YELLOW="\033[0;33m"
+
+function echo_green {
+  echo -e "${GREEN}$1"; tput sgr0
+}
+function echo_red {
+  echo -e "${RED}$1"; tput sgr0
+}
+function echo_yellow {
+  echo -e "${YELLOW}$1"; tput sgr0
+}
+
 ## Functions for generating a random 32/64 length GUID:
 function genuid_32() {
  GENUID_32=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1) && echo "UUID_32: $GENUID_32"
