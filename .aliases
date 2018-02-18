@@ -10,8 +10,15 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# utility aliases:
+alias vi="vim"
+alias grep='grep --color=auto '
+alias gh="cat ~/.zhistory | grep "
+alias flush="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
+
 ## listing things:
+alias ls="ls --color=tty"
 alias las="ls -asl"
 
-## always use colors with grep
-alias grep='grep --color=auto '
+# development aliases:
+alias debug_go="dlv debug --headless --listen=:2345 --log"

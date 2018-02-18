@@ -20,6 +20,7 @@ local ZSH_CACHE=$ZSH_CONF/cache                # for storing files like history 
 local LOCAL_ZSHRC=$HOME/.zshlocal/.zshrc       # Allow the local machine to have its own overriding zshrc if it wants it
 
 ## Custom Aliases:
+source ./.aliases
 alias vi="vim"
 alias ls="ls --color=tty"
 alias debug_go="dlv debug --headless --listen=:2345 --log"
