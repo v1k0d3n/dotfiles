@@ -1,6 +1,6 @@
 ## dotfiles
 
-*Warning:* Use with caution! At the moment these dotfiles are mostly set up for OSX, but soon changes will be made for multi-OS.
+***Warning:*** *Use with caution!* At the moment these dotfiles are mostly set up for OSX, but soon changes will be made for multi-OS.
 
 ### Credits
 
