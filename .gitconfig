@@ -4,10 +4,10 @@
         signingkey = 4BE43424ED42041E
 
 [gitreview]
-       username = v1k0d3n
+        username = v1k0d3n
 
 [credential]
-       helper = cache
+        helper = cache
 
 [commit]
         gpgsign = true
