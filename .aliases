@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# random collection of aliases
+## one letter aliases:
+alias h="history"
+
+## changing dirs:
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+## listing things:
+alias las="ls -asl"
