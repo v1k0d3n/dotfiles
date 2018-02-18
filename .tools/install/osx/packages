@@ -1,0 +1,60 @@
+#!/bin/bash
+# NOTE: this is still very much a WIP. use at your own risk.
+# environmental:
+set -x
+export TEMPDIR=/tmp/$USER/dotfiles
+
+## declare each of the urls to download in the array below:
+declare -a URL=(
+  "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US"
+  "https://central.github.com/deployments/desktop/desktop/latest/darwin"
+  "https://prerelease.keybase.io/Keybase.dmg"
+)
+
+## declare resulting file. must be in correct order to url above:
+declare -a FILE=(
+  "firefox.dmg"
+  "githubdesktop.zip"
+  "keybase.dmg"
+)
+
+# START
+## there shouldn't be a need to edit below this point
+## create array based on archive type:
+declare -a KIND=(
+  "dmg"
+  "pkg"
+  "zip"
+)
+
+## create directory for each $KIND:
+for type in "${KIND[@]}"
+do
+  mkdir -p $TEMPDIR/downloads/$type
+done
+
+## download each of the $URL to matching $FILE name:
+for ((i = 0; i < ${#URL[@]}; ++i)); do
+  printf "Downloading %s to %s\n" "${URL[i]}" "${FILE[i]}"
+  curl -s -L -o $TEMPDIR/downloads/"${FILE[i]}" "${URL[i]}"
+done
+
+## move each archive according to KIND folder:
+for ((i = 0; i < ${#KIND[@]}; ++i)); do
+  printf "Moving archives according to type ${KIND[i]}\n"
+  mv $TEMPDIR/downloads/*."${KIND[i]}" $TEMPDIR/downloads/"${KIND[i]}"/
+done
+
+declare -a DMG_ARRAY=($(ls $TEMPDIR/downloads/dmg/))
+declare -a PKG_ARRAY=($(ls $TEMPDIR/downloads/pkg/))
+declare -a ZIP_ARRAY=($(ls $TEMPDIR/downloads/zip/))
+
+printf "Listing DMG files located in $TEMPDIR/downloads/dmg/*\n" 
+printf "${DMG_ARRAY[@]}""\n"
+
+## for each KIND, unarchive, and mv or install (KIND == dmg):
+#for file in $TEMPDIR/downloads/dmg/*.dmg; do
+for ((i = 0; i < ${#DMG_ARRAY[@]}; ++i)); do
+  hdiutil mount $TEMPDIR/downloads/dmg/"${DMG_ARRAY[i]}"
+  sudo cp -R $(echo "/Volumes/"$(ls /Volumes/ | head -1)/*.app) /Applications/
+done 
