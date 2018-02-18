@@ -1,7 +1,9 @@
 set runtimepath=$HOME/dotfiles/.vim/,$VIMRUNTIME
 set paste
-set number
-se mouse+=a
+" really want to like numbering by default, but 
+" i like cut/paste over yank. just my preference.
+"set number
+"se mouse+=a
 highlight LineNr term=bold cterm=NONE ctermfg=Gray  ctermbg=NONE gui=NONE guifg=#656565 guibg=NONE
 highlight Comment guifg=#656565 LineNr ctermfg=grey
 execute pathogen#infect()

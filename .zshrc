@@ -33,7 +33,10 @@ export GPG_TTY=$(tty)
 
 ## Custom development locations:
 export GOPATH=/Users/$USER/projects/workspace
+### Custom GOROOT:
 export GOROOT=/usr/local/go
+### Brew GOROOT:
+#export GOROOT=/usr/local/opt/go/libexec
 
 # Save these for last:
 ## Updated MANPATH:

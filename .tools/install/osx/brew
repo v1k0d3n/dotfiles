@@ -1,0 +1,75 @@
+#!/bin/bash
+## WARNING!! STILL WIP. THIS WAS RUSHED AND
+## NEEDS TO BE MODIFIED (I HAVENT EVEN USED IT YET).
+## lets set some colors first:
+declare -r GREEN="\033[0;32m"
+declare -r RED="\033[0;31m"
+declare -r YELLOW="\033[0;33m"
+RESET=$(tput sgr0)
+
+function echo_green {
+  echo -e "${GREEN}$1"; tput sgr0
+}
+function echo_red {
+  echo -e "${RED}$1"; tput sgr0
+}
+function echo_yellow {
+  echo -e "${YELLOW}$1"; tput sgr0
+}
+
+# OSX brew packages (github):
+## always a good idea to update brew before continuing:
+brew update
+
+## upgrade any current formulas:
+brew upgrade
+
+### formulas to be installed:
+echo_yellow "\nDetermining if formulas need installed on this machine or already exist:"
+declare -a FORMULAS=(
+aircrack-ng
+awscli
+azure-cli
+coreutils
+delve
+docker
+git
+git-crypt
+gnu-tar
+go
+htop
+kubectx
+kubernetes-cli
+libgcrypt
+libusb
+libvirt
+nettle
+nmap
+nomad
+openssl
+packer
+pixman
+qemu
+sshuttle
+tcptraceroute
+terraform
+vagrant-completion
+vault
+vim
+watch
+wget
+xhyve)
+
+## determine if formula exists on machine. if not ask to install it:
+for ((i = 0; i < ${#FORMULAS[@]}; ++i)); do
+  echo -e "Determining if ${YELLOW}${FORMULAS[i]}${RESET} is already installed:"
+  if ! brew list | grep ${FORMULAS[i]} > /dev/null; then 
+    read -p "Formula ${RED}${FORMULAS[i]}${RESET} not found! Should it be installed? (y/n) " yn
+    case $yn in
+        [Yy]* ) brew install ${FORMULAS[i]} ; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+    else echo -e "${GREEN}${FORMULAS[i]}${RESET} is already installed on this machine!\n"
+  fi
+done
