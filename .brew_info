@@ -1,0 +1,16 @@
+## NOTES:
+### Delve creates some crazy issues. See below for installation and uninstallation notes.
+### To install Delve you will need to go to do the following...
+# $ cd $HOME/Library/Caches/Homebrew
+# $ tar xf delve-*.gz
+# $ cd delve-1.0.0-rc.2
+# $ sh scripts/gencert.sh
+# $ brew install go-delve/delve/delve
+# If you get "could not launch process: could not fork/exec", you need to try
+# in a new terminal.
+#
+# When uninstalling, to remove the dlv-cert certificate, run this command:
+#
+#    $ sudo security delete-certificate -t -c dlv-cert /Library/Keychains/System.keychain
+#
+# Alternatively, you may want to delete from the Keychain (with the Imported private key).

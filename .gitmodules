@@ -7,3 +7,6 @@
 [submodule ".vim/pack/v1k0d3n/opt/onedark.vim"]
 	path = .vim/pack/v1k0d3n/opt/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
+[submodule ".zprezto"]
+	path = .zprezto
+	url = https://github.com/sorin-ionescu/prezto.git

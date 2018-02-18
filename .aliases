@@ -12,3 +12,6 @@ alias .....="cd ../../../.."
 
 ## listing things:
 alias las="ls -asl"
+
+## always use colors with grep
+alias grep='grep --color=auto '
