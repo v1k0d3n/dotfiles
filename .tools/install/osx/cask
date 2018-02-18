@@ -30,6 +30,7 @@ declare -a CASKS=(
 gns3
 github
 iterm2
+java
 keybase
 vagrant
 vault

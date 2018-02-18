@@ -30,6 +30,7 @@ declare -a FORMULAS=(
 aircrack-ng
 awscli
 azure-cli
+bfg
 coreutils
 delve
 docker
