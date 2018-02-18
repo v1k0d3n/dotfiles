@@ -16,3 +16,11 @@ Some other credits and shout outs go to:
 
 * [Riseup OpenPGP BP](https://help.riseup.net/en/security/message-security/openpgp/best-practices)
 * [Patrick Stadler](https://github.com/pstadler/keybase-gpg-github)
+
+### Examples
+
+Example of Terminal Colors/Format:
+![alt terminal](.images/dotfiles/term.png)
+
+Example of VIM Colors/Format:
+![alt vim](.images/dotfiles/vim.png)
