@@ -1,8 +1,8 @@
-# dotfiles
+## dotfiles
 
-Warning: Use with caution. At the moment these dotfiles are mostly set up for OSX, but soon changes will be made for multi-OS.
+*Warning:* Use with caution! At the moment these dotfiles are mostly set up for OSX, but soon changes will be made for multi-OS.
 
-# Credits
+### Credits
 
 Credits go to the following folks for providing such great resources that you can see throughout my own personal dotfiles:
 
@@ -10,7 +10,7 @@ Credits go to the following folks for providing such great resources that you ca
 * [Dries Vints](https://github.com/driesvints/dotfiles)
 * [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
 
-# Other Credits
+### Other Credits
 
 Some other credits and shout outs go to:
 
