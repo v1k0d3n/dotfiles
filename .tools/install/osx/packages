@@ -1,5 +1,7 @@
 #!/bin/bash
 # NOTE: this is still very much a WIP. use at your own risk.
+# You may find this to be helpful (will use soon):
+# http://commandlinemac.blogspot.com/2008/12/installing-dmg-application-from-command.html
 # environmental:
 set -x
 export TEMPDIR=/tmp/$USER/dotfiles
