@@ -29,6 +29,7 @@ echo_yellow "\nDetermining if formulas need installed on this machine or already
 declare -a CASKS=(
 gns3
 github
+gitter
 iterm2
 java
 keybase

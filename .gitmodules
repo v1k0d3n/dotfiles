@@ -10,3 +10,6 @@
 [submodule ".zprezto"]
 	path = .zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule ".vim/pack/v1k0d3n/start/vim-go"]
+	path = .vim/pack/v1k0d3n/start/vim-go
+	url = https://github.com/fatih/vim-go.git
